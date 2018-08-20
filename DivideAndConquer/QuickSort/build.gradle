@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'quick.sort.Main'
+
+sourceSets {
+  main {
+    java {
+      srcDirs = ['src/main/java']
+    }
+    resources {
+      srcDirs = ['src/main/resources']
+    }
+  }
+}
+
+sourceCompatibility = 10

@@ -1,8 +1,6 @@
 #ifndef CLOSESTPAIR_PAIR_H
 #define CLOSESTPAIR_PAIR_H
-
-#endif //CLOSESTPAIR_PAIR_H
-
+#include <Point.h>
 
 class Pair {
     Point a, b;
@@ -21,3 +19,5 @@ public:
     double getDistance() const;
     static Pair findClosestPair(Point P[], int n);
 };
+
+#endif //CLOSESTPAIR_PAIR_H

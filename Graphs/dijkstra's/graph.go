@@ -64,7 +64,6 @@ func (g *graph) readFromFile(path string) {
 			weight, _ := strconv.ParseUint(s[1], 10, 64)
 			g.createVertex(uLabel)
 			g.addEdge(vLabel, uLabel, uint(weight))
-			g.addReverseEdge(uLabel, vLabel, uint(weight))
 		}
 	}
 }
@@ -79,15 +78,6 @@ func (g *graph) addEdge(vLabel, uLabel string, count uint) bool {
 		return false
 	}
 	n.addEdge(uLabel, count)
-	return true
-}
-
-func (g *graph) addReverseEdge(vLabel, uLabel string, count uint) bool {
-	n := g.getVertex(vLabel)
-	if n == nil {
-		return false
-	}
-	n.addReverseEdge(uLabel, count)
 	return true
 }
 

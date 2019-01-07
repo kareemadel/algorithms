@@ -72,12 +72,12 @@ func (g *graph) init() {
 	g.adList = make(map[string]*vertex)
 }
 
-func (g *graph) addEdge(vLabel, uLabel string, count uint) bool {
+func (g *graph) addEdge(vLabel, uLabel string, weight uint) bool {
 	n := g.getVertex(vLabel)
 	if n == nil {
 		return false
 	}
-	n.addEdge(uLabel, count)
+	n.addEdge(uLabel, weight)
 	return true
 }
 
